@@ -6,6 +6,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
+    background-color: var(--color-4);
 }
 
 ul {
@@ -16,6 +17,10 @@ ul {
 
 i {
     color: var(--color-3);
+}
+
+img {
+    margin-top: -15px;
 }
 
 
@@ -54,6 +59,18 @@ i {
     color: var(--color-1);
 }
 
+#skills > h2 {
+    font-size: var(--text-size-3);
+    font-weight: var(--text-weight-1);
+    color: var(--color-3);
+}
+
+#hr-skills {
+    width: 90%;
+    margin: auto;
+    border: 1px solid var(--color-3);
+}
+
 
 
 /* VARIABLES */
@@ -63,6 +80,7 @@ i {
     --color-1: #000000;
     --color-2: #FFFFFF;
     --color-3: #CC6161;
+    --color-4: #D9D9DA;
     /* Text size */
     --text-size-1: 30px;
     --text-size-2: 20px;
