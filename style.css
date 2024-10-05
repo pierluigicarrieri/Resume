@@ -20,11 +20,15 @@ i {
 }
 
 img {
-    margin-top: -15px;
+
 }
 
 
 /* PAGE */
+
+#pic {
+    margin-top: -15px;
+}
 
 #personal-info {
     height: 21%;
@@ -59,16 +63,67 @@ img {
     color: var(--color-1);
 }
 
-#skills > h2 {
+#contact-info > li > i {
+    font-size: var(--icon-size-1);
+}
+
+#skills > h2, div{
     font-size: var(--text-size-3);
     font-weight: var(--text-weight-1);
     color: var(--color-3);
 }
 
-#hr-skills {
+.hr-left {
     width: 90%;
     margin: auto;
     border: 1px solid var(--color-3);
+}
+
+#skills li:last-child {
+    margin-top: -15px;
+}
+
+.array-arrow {
+    color: var(--color-1);
+}
+
+#interests i {
+    font-size: var(--icon-size-2);
+}
+
+/* LOGOS */
+
+#html-logo {
+    height: 25px;
+    margin-left: 10px;
+}
+
+#css-logo {
+    height: 25px;
+    margin-left: 10px;
+}
+
+#javascript-logo {
+    height: 35px;
+    margin-left: 5px;
+}
+
+#vuejs-logo {
+    height: 25px;
+    margin-left: 5px;
+}
+
+#php-logo {
+    height: 20px;
+    margin-left: 10px;
+}
+
+#laravel-logo {
+    height: 40px;
+}
+
+#mysql-logo {
+    height: 60px;
 }
 
 
@@ -91,5 +146,7 @@ img {
     --text-weight-1: 700;
     --text-weight-2: 400;
     --text-weight-3: 300;
-
+    /* Icons size */
+    --icon-size-1: 20px;
+    --icon-size-2: 25px;
 }
