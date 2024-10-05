@@ -1,3 +1,5 @@
+/* TAGS */
+
 html, body {
     width: 210mm;
     height: 297mm;
@@ -12,15 +14,49 @@ ul {
     margin: 0;
 }
 
+
+/* PAGE */
+
 #personal-info {
-    height: 20%;
+    height: 21%;
     background-color: var(--color-3);
+}
+
+#name {
+    font-size: var(--text-size-1);
+    font-weight: var(--text-weight-2);
+    color: var(--color-2);
+}
+
+#qualification {
+    font-size: var(--text-size-3);
+    font-weight: var(--text-weight-2);
+    color: var(--color-2);
+}
+
+#description {
+    font-size: var(--text-size-4);
+    font-weight: var(--text-weight-3);
+    color: var(--color-2);
 }
 
 
 
+/* VARIABLES */
+
 :root {
+    /* Colors */
     --color-1: #000000;
     --color-2: #FFFFFF;
     --color-3: #CC6161;
+    /* Text size */
+    --text-size-1: 30px;
+    --text-size-2: 20px;
+    --text-size-3: 18px;
+    --text-size-4: 15px;
+    /* Text weight */
+    --text-weight-1: 700;
+    --text-weight-2: 400;
+    --text-weight-3: 300;
+
 }
