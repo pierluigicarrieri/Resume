@@ -316,7 +316,7 @@ if($_SESSION['lang'] == 'eng') {
 
                         <div class="title-3 coral"><?= $content['education']['content'][2]['title'] ?></div>
 
-                        <div class="title-4 black"><?= $content['education']['content'][0]['body'] ?></div>
+                        <div class="title-4 black"><?= $content['education']['content'][2]['body'] ?></div>
         
                         <div class="flex justify-between text-2 coral">
                             <em>09/2003-07/2009</em>
