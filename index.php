@@ -311,6 +311,10 @@
                 </div>
 
             </div>
+
+            <div class="hr-privacy"></div>
+
+            <div id="privacy-policy">Autorizzo il trattamento dei miei dati personali ex.art 13 GDPR 679/2016</div>
             
         </section>
 

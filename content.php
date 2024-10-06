@@ -68,7 +68,9 @@ $ita = [
                 'body' => 'Liceo Scientifico San Vincenzo De\' Paoli'
             ],
         ]
-    ]
+    ],
+
+    'privacy_policy' => 'Autorizzo il trattamento dei miei dati personali ex.art 13 GDPR 679/2016'
     
 ];
 
@@ -142,6 +144,8 @@ $eng = [
                 'body' => 'Liceo Scientifico San Vincenzo De\' Paoli'
             ],
         ]
-    ]
+    ],
+
+    'privacy_policy' => 'I allow the use of my personal data ex.art 13 GDPR 679/2016'
     
 ];
