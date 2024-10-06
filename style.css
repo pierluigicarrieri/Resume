@@ -31,9 +31,6 @@ i {
     background-color: var(--color-3);
 }
 
-#contact-info > li {
-    padding: 4px 0px;
-}
 
 #contact-info > li > div {
     font-size: var(--text-size-5);
@@ -45,18 +42,8 @@ i {
     font-size: var(--icon-size-1);
 }
 
-.hr-left {
-    width: 90%;
-    margin: auto;
-    border: 1px solid var(--color-3);
-}
-
 #skills li:last-child {
     margin-top: -15px;
-}
-
-.array-arrow {
-    color: var(--color-1);
 }
 
 #interests i {
@@ -92,9 +79,26 @@ i {
     font-weight: var(--text-weight-2);
 }
 
+.title-4 {
+    font-size: var(--text-size-4);
+    font-weight: var(--text-weight-2);
+}
+
 .text-2 {
     font-size: var(--text-size-4);
     font-weight: var(--text-weight-3);
+}
+
+.hr-left {
+    width: 90%;
+    margin: auto;
+    border: 1px solid var(--color-3);
+}
+
+.hr-full {
+    width: 100%;
+    margin: auto;
+    border: 1px solid var(--color-3);
 }
 
 /* LOGOS */
