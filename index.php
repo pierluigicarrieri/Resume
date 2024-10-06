@@ -32,7 +32,6 @@ $content = $_SESSION['lang'] == 'eng' ? $eng : $ita;
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="./app.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Resume</title>
 </head>
@@ -170,7 +169,7 @@ $content = $_SESSION['lang'] == 'eng' ? $eng : $ita;
                 <div id="lang-switch" class="p-2">
                     <span id="switch-eng" onclick="window.location.href='?lang=eng'; switchLanguage()">ENG</span>
                     <span>/</span>
-                    <span id="switch-ita" onclick="window.location.href='?lang=ita'; switchLanguage()">ITA</span>
+                    <span id="switch-ita" class="selected" onclick="window.location.href='?lang=ita'; switchLanguage()">ITA</span>
                 </div>
 
             </div>
@@ -326,6 +325,8 @@ $content = $_SESSION['lang'] == 'eng' ? $eng : $ita;
         </section>
 
     </div>
+
+    <script src="./app.js"></script>
 
 </body>
 </html>

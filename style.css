@@ -140,6 +140,12 @@ height: 7px;
 border: 2px solid var(--color-3);
 }
 
+.selected {
+    color: var(--color-2);
+    font-size: var(--text-size-3);
+    font-weight: var(--text-weight-2);
+}
+
 /* LOGOS */
 
 #html-logo {
