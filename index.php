@@ -1,3 +1,29 @@
+<?php
+
+// Starts session
+session_start();
+
+// Includes multilang text file
+include 'content.php';
+
+// Italian as the default language
+if (!isset($_SESSION['lang'])) {
+    $_SESSION['lang'] = 'ita';
+}
+
+// Switches language when button is clicked
+if (isset($_GET['lang'])) {
+    $_SESSION['lang'] = $_GET['lang'];
+}
+
+// Get the current content based on the language saved in session
+$content = $_SESSION['lang'] == 'eng' ? $eng : $ita;
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,27 +51,27 @@
 
                 <li class="py-1">
                     <i class="fa-regular fa-envelope"></i>
-                    <div>pierluigi.carrieri.90@gmail.com</div>
+                    <div><?= $content['contact_info']['mail'] ?></div>
                 </li>
 
                 <li class="py-1">
                     <i class="fa-solid fa-mobile-screen-button"></i>
-                    <div>348 06 35 960</div>
+                    <div><?= $content['contact_info']['phone'] ?></div>
                 </li>
 
                 <li class="py-1">
                     <i class="fa-solid fa-location-dot"></i>
-                    <div>Bologna (BO), Italia</div>
+                    <div><?= $content['contact_info']['address'] ?></div>
                 </li>
 
                 <li class="py-1">
                     <i class="fa-brands fa-linkedin"></i>
-                    <div>www.linkedin.com/in/pierluigi-carrieri-2489a424a</div>
+                    <div><?= $content['contact_info']['linkedin'] ?></div>
                 </li>
 
                 <li class="py-1">
                     <i class="fa-brands fa-github"></i>
-                    <div>https://github.com/pierluigicarrieri</div>
+                    <div><?= $content['contact_info']['github'] ?></div>
                 </li>
 
             </ul>
@@ -145,9 +171,9 @@
                 </div>
 
                 <div id="lang-switch" class="p-2">
-                    <span>ENG</span>
+                    <span onclick="window.location.href='?lang=eng'">ENG</span>
                     <span>/</span>
-                    <span>ITA</span>
+                    <span onclick="window.location.href='?lang=ita'">ITA</span>
                 </div>
 
             </div>
