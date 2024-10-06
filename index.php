@@ -126,23 +126,23 @@ $content = $_SESSION['lang'] == 'eng' ? $eng : $ita;
             <!-- Interessi -->
             <div id="interests">
 
-                <h2 class="text-center title-2 coral">INTERESSI</h2>
+                <h2 class="text-center title-2 coral"><?= $content['interests']['title'] ?></h2>
 
                 <div class="hr-left"></div>
 
                 <ul class="my-3">
                     <li class="flex items-center py-2">
-                        <div class="title-3 coral">Lettura&nbsp;</div>
+                        <div class="title-3 coral"><?= $content['interests']['content']['0'] ?>&nbsp;</div>
                         <div class="array-arrow">&nbsp;&rArr;</div>
                         <img src="./assets/reading.png" alt="reading" id="reading-pic">
                     </li>
                     <li class="flex items-center py-2">
-                        <div class="title-3 coral">Cinema&nbsp;</div>
+                        <div class="title-3 coral"><?= $content['interests']['content']['1'] ?>&nbsp;</div>
                         <div class="array-arrow">&nbsp;&rArr;</div>
                         <img src="./assets/cinema.png" alt="cinema" id="cinema-pic">
                     </li>
                     <li class="flex items-center py-2">
-                        <div class="title-3 coral">Sport&nbsp;</div>
+                        <div class="title-3 coral"><?= $content['interests']['content']['2'] ?>&nbsp;</div>
                         <div class="array-arrow">&nbsp;&rArr;</div>
                         <img src="./assets/sport.png" alt="sport" id="sport-pic">
                     </li>
@@ -164,16 +164,13 @@ $content = $_SESSION['lang'] == 'eng' ? $eng : $ita;
 
                 <hr class="w-5/12 white">
 
-                <div class="py-5 text-2 white">
-                    Sono uno sviluppatore junior sempre alla ricerca di sfide e desideroso di fare nuove esperienze.
-                    La programmazione e la comunicazione con persone provenienti da tutto il mondo mi entusiasmano: 
-                    sono sempre pronto a mettere alla prova le mie capacità e ad acquisirne di nuove.
-                </div>
+                <div class="py-5 text-2 white"><?= $content['personal_info'] ?></div>
 
+                <!-- Buttons to select resume language -->
                 <div id="lang-switch" class="p-2">
-                    <span onclick="window.location.href='?lang=eng'">ENG</span>
+                    <span id="switch-eng" onclick="window.location.href='?lang=eng'; switchLanguage()">ENG</span>
                     <span>/</span>
-                    <span onclick="window.location.href='?lang=ita'">ITA</span>
+                    <span id="switch-ita" onclick="window.location.href='?lang=ita'; switchLanguage()">ITA</span>
                 </div>
 
             </div>
@@ -181,7 +178,7 @@ $content = $_SESSION['lang'] == 'eng' ? $eng : $ita;
             <!-- Experience -->
             <div>
 
-                <h2 class="mt-2 title-2 coral">ESPERIENZA</h2>
+                <h2 class="mt-2 title-2 coral"><?= $content['experience']['title'] ?></h2>
 
                 <div class="hr-full"></div>
 
@@ -204,37 +201,24 @@ $content = $_SESSION['lang'] == 'eng' ? $eng : $ita;
                     <ul class="experience-body">
 
                         <li>
-                            <span class="title-4 coral">Sviluppo e personalizzazione di ERP</span>
+                            <span class="title-4 coral"><?= $content['experience']['content'][0]['title'] ?></span>
                             <span class="object-arrow">&nbsp;&rarr;</span>
-                            <span class="text-1 black">
-                                Gestito lo sviluppo di un ERP modulare, utilizzato come template per diversi progetti aziendali, 
-                                personalizzato per settori come pulizia industriale e istruzione. 
-                                Contributo sia al template principale sia alle sue iterazioni specifiche.
-                            </span>
+                            <span class="text-1 black"><?= $content['experience']['content'][0]['content'] ?></span>
                         </li>
 
                         <li>
-                            <span class="title-4 coral">Creazione del modulo di gestione magazzino</span>
+                            <span class="title-4 coral"><?= $content['experience']['content'][1]['title'] ?></span>
                             <span class="object-arrow">&nbsp;&rarr;</span>
-                            <span class="text-1 black">
-                                Ideato, sviluppato e portato a termine in completa autonomia il modulo di gestione del magazzino 
-                                all'interno dell'ERP, con particolare attenzione alla gestione delle scorte, inventario e ordini.
-                            </span>
+                            <span class="text-1 black"><?= $content['experience']['content'][1]['content'] ?></span>
                         </li>
 
                         <li>
-                            <span class="title-4 coral">Manutenzione e miglioramenti su e-commerce</span>
+                            <span class="title-4 coral"><?= $content['experience']['content'][2]['title'] ?></span>
                             <span class="object-arrow">&nbsp;&rarr;</span>
-                            <span class="text-1 black">
-                                Gestito la manutenzione di un sito e-commerce B2B per la vendita all’ingrosso di parti di auto 
-                                e camper, con implementazioni su gestione clienti, agenti di vendita e ordini. Esperienza anche 
-                                nella creazione e design di siti web in WordPress.
-                            </span>
+                            <span class="text-1 black"><?= $content['experience']['content'][2]['content'] ?></span>
                         </li>
-
 
                     </ul>
-
 
                 </div>
 
@@ -244,7 +228,7 @@ $content = $_SESSION['lang'] == 'eng' ? $eng : $ita;
             <!-- Training -->
             <div>
 
-                <h2 class="mt-4 title-2 coral">CORSI E MASTER</h2>
+                <h2 class="mt-4 title-2 coral"><?= $content['courses_and_training']['title'] ?></h2>
 
                 <div class="hr-full"></div>
 
@@ -266,10 +250,7 @@ $content = $_SESSION['lang'] == 'eng' ? $eng : $ita;
                     <ul>
 
                         <li>
-                            <span class="text-1 black">
-                                Bootcamp di 700 ore teoriche e pratiche durante il quale ho avuto modo di studiare 
-                                e padroneggiare tecnologie frontend e backend.
-                            </span>
+                            <span class="text-1 black"><?= $content['courses_and_training']['content'] ?></span>
                         </li>
 
                     </ul>
@@ -282,7 +263,7 @@ $content = $_SESSION['lang'] == 'eng' ? $eng : $ita;
             <!-- Education -->
             <div>
 
-                <h2 class="mt-4 title-2 coral">FORMAZIONE</h2>
+                <h2 class="mt-4 title-2 coral"><?= $content['education']['title'] ?></h2>
 
                 <div class="hr-full"></div>
 
@@ -291,9 +272,9 @@ $content = $_SESSION['lang'] == 'eng' ? $eng : $ita;
 
                     <div class="my-2 main-section-header">
 
-                        <div class="title-3 coral">C2 Proficiency</div>
+                        <div class="title-3 coral"><?= $content['education']['content'][0]['title'] ?></div>
 
-                        <div class="title-4 black">British Council</div>
+                        <div class="title-4 black"><?= $content['education']['content'][0]['body'] ?></div>
 
 
                     </div>
@@ -305,9 +286,9 @@ $content = $_SESSION['lang'] == 'eng' ? $eng : $ita;
 
                     <div class="my-2 main-section-header">
 
-                        <div class="title-3 coral">Laurea in Giurisprudenza</div>
+                        <div class="title-3 coral"><?= $content['education']['content'][1]['title'] ?></div>
 
-                        <div class="title-4 black">Università di Bologna</div>
+                        <div class="title-4 black"><?= $content['education']['content'][1]['body'] ?></div>
         
                         <div class="flex justify-between text-2 coral">
                             <em>09/2009-12/2017</em>
@@ -323,9 +304,9 @@ $content = $_SESSION['lang'] == 'eng' ? $eng : $ita;
 
                     <div class="my-2 main-section-header">
 
-                        <div class="title-3 coral">Diploma di Maturità Scientifica</div>
+                        <div class="title-3 coral"><?= $content['education']['content'][2]['title'] ?></div>
 
-                        <div class="title-4 black">Liceo Scientifico San Vincenzo de Paoli</div>
+                        <div class="title-4 black"><?= $content['education']['content'][0]['body'] ?></div>
         
                         <div class="flex justify-between text-2 coral">
                             <em>09/2003-07/2009</em>
@@ -340,7 +321,7 @@ $content = $_SESSION['lang'] == 'eng' ? $eng : $ita;
 
             <div class="hr-privacy"></div>
 
-            <div id="privacy-policy">Autorizzo il trattamento dei miei dati personali ex.art 13 GDPR 679/2016</div>
+            <div id="privacy-policy"><?= $content['privacy_policy'] ?></div>
             
         </section>
 
