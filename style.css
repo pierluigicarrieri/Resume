@@ -19,10 +19,6 @@ i {
     color: var(--color-3);
 }
 
-img {
-
-}
-
 
 /* PAGE */
 
@@ -33,24 +29,6 @@ img {
 #personal-info {
     height: 21%;
     background-color: var(--color-3);
-}
-
-#name {
-    font-size: var(--text-size-1);
-    font-weight: var(--text-weight-2);
-    color: var(--color-2);
-}
-
-#qualification {
-    font-size: var(--text-size-3);
-    font-weight: var(--text-weight-2);
-    color: var(--color-2);
-}
-
-#description {
-    font-size: var(--text-size-4);
-    font-weight: var(--text-weight-3);
-    color: var(--color-2);
 }
 
 #contact-info > li {
@@ -65,12 +43,6 @@ img {
 
 #contact-info > li > i {
     font-size: var(--icon-size-1);
-}
-
-#skills > h2, div{
-    font-size: var(--text-size-3);
-    font-weight: var(--text-weight-1);
-    color: var(--color-3);
 }
 
 .hr-left {
@@ -89,6 +61,40 @@ img {
 
 #interests i {
     font-size: var(--icon-size-2);
+}
+
+/* CLASSES */
+
+.black {
+    color: var(--color-1);
+}
+
+.white {
+    color: var(--color-2);
+}
+
+.coral {
+    color: var(--color-3);
+}
+
+.title-1 {
+    font-size: var(--text-size-1);
+    font-weight: var(--text-weight-2);
+}
+
+.title-2 {
+    font-size: var(--text-size-3);
+    font-weight: var(--text-weight-1);
+}
+
+.title-3 {
+    font-size: var(--text-size-3);
+    font-weight: var(--text-weight-2);
+}
+
+.text-2 {
+    font-size: var(--text-size-4);
+    font-weight: var(--text-weight-3);
 }
 
 /* LOGOS */
@@ -124,6 +130,22 @@ img {
 
 #mysql-logo {
     height: 60px;
+}
+
+#reading-pic {
+    height: 40px;
+    margin-left: 15px;
+}
+
+#cinema-pic {
+    height: 40px;
+    margin-left: 10px;
+    margin-top: -10px;
+}
+
+#sport-pic {
+    height: 40px;
+    margin-left: 10px;
 }
 
 
