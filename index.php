@@ -129,6 +129,7 @@
         <!-- Right content: personal info, experience, education -->
         <section class="w-3/4 ps-4">
 
+            <!-- Personal info -->
             <div id="personal-info" class="p-3">
 
                 <h1 class="title-1 white">Pierluigi Carrieri</h1>
