@@ -30,10 +30,16 @@ i {
 }
 
 #personal-info {
+    position: relative;
     height: 21%;
     background-color: var(--color-3);
 }
 
+#lang-switch {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 
 #contact-info > li > div {
     font-size: var(--text-size-5);
