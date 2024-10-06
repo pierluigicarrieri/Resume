@@ -6,7 +6,6 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
-    background-color: var(--color-4);
 }
 
 ul {
@@ -21,6 +20,10 @@ i {
 
 
 /* PAGE */
+
+#content-wrapper {
+    background-color: var(--color-4);
+}
 
 #pic {
     margin-top: -15px;
@@ -84,6 +87,11 @@ i {
     font-weight: var(--text-weight-2);
 }
 
+.text-1 {
+    font-size: var(--text-size-4);
+    font-weight: var(--text-weight-2);
+}
+
 .text-2 {
     font-size: var(--text-size-4);
     font-weight: var(--text-weight-3);
@@ -99,6 +107,21 @@ i {
     width: 100%;
     margin: auto;
     border: 1px solid var(--color-3);
+}
+
+.experience-body li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.experience-body li::before {
+content: "";
+position: absolute;
+left: 0;
+top: 0.6em;
+width: 7px;
+height: 7px;
+border: 2px solid var(--color-3);
 }
 
 /* LOGOS */
