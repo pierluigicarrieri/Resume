@@ -19,6 +19,17 @@ if (isset($_GET['lang'])) {
 // Get the current content based on the language saved in session
 $content = $_SESSION['lang'] == 'eng' ? $eng : $ita;
 
+$eng_switch_class = '';
+$ita_switch_class = '';
+
+if($_SESSION['lang'] == 'eng') {
+    $eng_switch_class = 'selected';
+    $ita_switch_class = 'not-selected';
+} else if($_SESSION['lang'] == 'ita') {
+    $eng_switch_class = 'not-selected';
+    $ita_switch_class = 'selected';
+}
+
 ?>
 
 
@@ -167,9 +178,9 @@ $content = $_SESSION['lang'] == 'eng' ? $eng : $ita;
 
                 <!-- Buttons to select resume language -->
                 <div id="lang-switch" class="p-2">
-                    <span id="switch-eng" onclick="window.location.href='?lang=eng'; switchLanguage()">ENG</span>
+                    <span class="<?= $eng_switch_class ?>" onclick="window.location.href='?lang=eng'">ENG</span>
                     <span>/</span>
-                    <span id="switch-ita" class="selected" onclick="window.location.href='?lang=ita'; switchLanguage()">ITA</span>
+                    <span class="<?= $ita_switch_class ?>" class="selected" onclick="window.location.href='?lang=ita'">ITA</span>
                 </div>
 
             </div>
@@ -326,7 +337,7 @@ $content = $_SESSION['lang'] == 'eng' ? $eng : $ita;
 
     </div>
 
-    <script src="./app.js"></script>
-
 </body>
+
 </html>
+
